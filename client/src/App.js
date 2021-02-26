@@ -34,6 +34,7 @@ export default function App() {
     }),
     [auth]
   );
+  if (auth === undefined) return null; //delete flash login
   return (
     <ApolloProvider client={client}>
       <authContext.Provider value={authData}>
