@@ -59,8 +59,13 @@ async function getUser(id, username) {
   if (!user) throw new Error("User not found");
   return user;
 }
+async function updateAvatar(file) {
+  console.log(file);
+  return null;
+}
 module.exports = {
   register,
   login,
   getUser,
+  updateAvatar,
 };

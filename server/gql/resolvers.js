@@ -8,6 +8,8 @@ const resolvers = {
     //User
     register: (_, { input }) => userController.register(input),
     login: (_, { input }) => userController.login(input),
+    //Update Avatar
+    updateAvatar: (_, { file }) => userController.updateAvatar(file),
   },
 };
 module.exports = resolvers;
