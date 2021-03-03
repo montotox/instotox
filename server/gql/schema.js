@@ -39,6 +39,8 @@ const typeDefs = gql`
     login(input: LoginInput): Token
     #Update Avatar
     updateAvatar(file: Upload): UpdateAvatar
+    #Delete Avatar
+    deleteAvatar: Boolean
   }
 `;
 

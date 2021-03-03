@@ -9,7 +9,9 @@ const resolvers = {
     register: (_, { input }) => userController.register(input),
     login: (_, { input }) => userController.login(input),
     //Update Avatar
-    updateAvatar: (_, { file }) => userController.updateAvatar(file),
+    updateAvatar: (_, { file }, ctx) => userController.updateAvatar(file, ctx),
+    //Delete Avatar
+    deleteAvatar: (_, {}, ctx) => userController.deleteAvatar(ctx),
   },
 };
 module.exports = resolvers;
