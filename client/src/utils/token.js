@@ -11,3 +11,7 @@ export function getToken(token) {
 export function decodeToken(token) {
   return jwtDecode(token);
 }
+
+export function removeToken() {
+  localStorage.removeItem(TOKEN);
+}

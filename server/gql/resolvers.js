@@ -12,6 +12,8 @@ const resolvers = {
     updateAvatar: (_, { file }, ctx) => userController.updateAvatar(file, ctx),
     //Delete Avatar
     deleteAvatar: (_, {}, ctx) => userController.deleteAvatar(ctx),
+    //Update User
+    updateUser: (_, { input }, ctx) => userController.updateUser(input, ctx),
   },
 };
 module.exports = resolvers;

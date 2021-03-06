@@ -29,6 +29,14 @@ const typeDefs = gql`
     email: String!
     password: String!
   }
+  input UserUpdateInput {
+    name: String
+    email: String
+    currentPassword: String
+    newPassword: String
+    siteWeb: String
+    description: String
+  }
   type Query {
     #User
     getUser(id: ID, username: String): User
@@ -41,6 +49,8 @@ const typeDefs = gql`
     updateAvatar(file: Upload): UpdateAvatar
     #Delete Avatar
     deleteAvatar: Boolean
+    #Update User
+    updateUser(input: UserUpdateInput): Boolean
   }
 `;
 
