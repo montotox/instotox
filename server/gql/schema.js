@@ -40,6 +40,7 @@ const typeDefs = gql`
   type Query {
     #User
     getUser(id: ID, username: String): User
+    search(search: String): [User]
   }
   type Mutation {
     #User
