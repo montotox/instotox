@@ -49,10 +49,21 @@ async function getFollowers(username) {
   }
   return followersList;
 }
+async function getFollowing(username) {
+  const user = await User.findOne({ username });
+  const following = await Follow.find({ idUser: user._id }).populate("follow");
+  const followingList = [];
+  for await (const data of following) {
+    followingList.push(data.follow);
+  }
+  console.log(following);
+  return followingList;
+}
 
 module.exports = {
   follow,
   isFollow,
   unFollow,
   getFollowers,
+  getFollowing,
 };
