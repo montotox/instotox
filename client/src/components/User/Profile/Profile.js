@@ -13,7 +13,7 @@ import imageNotFound from "../../../assets/png/avatar.png";
 import "./Profile.scss";
 
 export default function Profile(props) {
-  const { username } = props;
+  const { username, totalPublications } = props;
   const [showModal, setShowModal] = useState(false);
   const [titleModal, setTitleModal] = useState("");
   const [childrenModal, setChildrenModal] = useState(null);
@@ -68,7 +68,10 @@ export default function Profile(props) {
             auth={auth}
             handlerModal={handlerModal}
           />
-          <Followers username={username} />
+          <Followers
+            username={username}
+            totalPublications={totalPublications}
+          />
           <div className="other">
             <p className="name">{getUser.name}</p>
             {getUser.siteWeb && (

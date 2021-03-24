@@ -56,7 +56,6 @@ async function getFollowing(username) {
   for await (const data of following) {
     followingList.push(data.follow);
   }
-  console.log(following);
   return followingList;
 }
 

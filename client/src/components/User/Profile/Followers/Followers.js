@@ -7,7 +7,7 @@ import ListUsers from "../../ListUsers";
 import "./Followers.scss";
 
 export default function Followers(props) {
-  const { username } = props;
+  const { username, totalPublications } = props;
   const [showModal, setShowModal] = useState(false);
   const [titleModal, setTitleModal] = useState("");
   const [childrenModal, setChildrenModal] = useState(null);
@@ -69,7 +69,7 @@ export default function Followers(props) {
     <>
       <div className="followers">
         <p>
-          <span>**</span> posts
+          <span>{totalPublications}</span> posts
         </p>
         <p className="link" onClick={openFollowers}>
           <span>{size(getFollowers)}</span> followers

@@ -19,6 +19,17 @@ const typeDefs = gql`
     status: Boolean
     urlAvatar: String
   }
+  type Publish {
+    status: Boolean
+    urlFile: String
+  }
+  type Publication {
+    id: ID
+    idUser: ID
+    file: String
+    typeFile: String
+    createAt: String
+  }
   input UserInput {
     name: String!
     username: String!
@@ -45,6 +56,8 @@ const typeDefs = gql`
     isFollow(username: String!): Boolean
     getFollowers(username: String!): [User]
     getFollowing(username: String!): [User]
+    #Publication
+    getPublications(username: String!): [Publication]
   }
   type Mutation {
     #User
@@ -60,6 +73,8 @@ const typeDefs = gql`
     follow(username: String!): Boolean
     #Unfollow
     unFollow(username: String!): Boolean
+    #Publication
+    publish(file: Upload): Publish
   }
 `;
 
