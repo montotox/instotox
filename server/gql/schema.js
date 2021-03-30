@@ -30,6 +30,12 @@ const typeDefs = gql`
     typeFile: String
     createAt: String
   }
+  type Comment {
+    idPublication: ID
+    idUser: User
+    comment: String
+    createAt: String
+  }
   input UserInput {
     name: String!
     username: String!
@@ -48,6 +54,10 @@ const typeDefs = gql`
     siteWeb: String
     description: String
   }
+  input CommentInput {
+    idPublication: ID
+    comment: String
+  }
   type Query {
     #User
     getUser(id: ID, username: String): User
@@ -58,6 +68,8 @@ const typeDefs = gql`
     getFollowing(username: String!): [User]
     #Publication
     getPublications(username: String!): [Publication]
+    #Comment
+    getComments(idPublication: ID!): [Comment]
   }
   type Mutation {
     #User
@@ -75,6 +87,8 @@ const typeDefs = gql`
     unFollow(username: String!): Boolean
     #Publication
     publish(file: Upload): Publish
+    #Comment
+    addComment(input: CommentInput): Comment
   }
 `;
 

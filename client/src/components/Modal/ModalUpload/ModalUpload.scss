@@ -35,6 +35,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: 2;
   }
   .btn-upload {
     position: absolute;
@@ -53,4 +54,7 @@
       font-size: 18px;
     }
   }
+}
+.ui.modal {
+  text-align: center !important;
 }
