@@ -70,6 +70,9 @@ const typeDefs = gql`
     getPublications(username: String!): [Publication]
     #Comment
     getComments(idPublication: ID!): [Comment]
+    #Like
+    isLiked(idPublication: ID!): Boolean
+    countLikes(idPublication: ID!): Int
   }
   type Mutation {
     #User
@@ -89,6 +92,9 @@ const typeDefs = gql`
     publish(file: Upload): Publish
     #Comment
     addComment(input: CommentInput): Comment
+    #Like
+    addLike(idPublication: ID!): Boolean
+    deleteLike(idPublication: ID!): Boolean
   }
 `;
 
