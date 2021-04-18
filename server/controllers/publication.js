@@ -1,5 +1,6 @@
 const Publication = require("../models/publication");
 const User = require("../models/user");
+const Follow = require("../models/follow");
 const awsUploadImagen = require("../../server/utils/aws-upload-image");
 const { v4: uuidv4 } = require("uuid");
 
@@ -40,7 +41,31 @@ async function getPublications(username) {
   return publications;
 }
 
+async function getPublicationsFolloweds(ctx) {
+  //access to list of users followeds
+  const followeds = await Follow.find({ idUser: ctx.user.id }).populate(
+    "follow"
+  );
+  const followedsList = [];
+  for await (const data of followeds) {
+    followedsList.push(data.follow);
+  }
+  const publicationsList = [];
+  for await (const data of followedsList) {
+    const publications = await Publication.find()
+      .where({ idUser: data._id })
+      .sort({ createAt: -1 })
+      .populate("idUser"); //you can add .limit(#) to limit the post per user.
+    publicationsList.push(...publications);
+  }
+  const result = publicationsList.sort((a, b) => {
+    return new Date(b.createAt) - new Date(a.createAt);
+  });
+  return result;
+}
+
 module.exports = {
   publish,
   getPublications,
+  getPublicationsFolloweds,
 };

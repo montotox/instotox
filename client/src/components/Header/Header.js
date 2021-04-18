@@ -11,15 +11,21 @@ export default function Header() {
     <div className="header">
       <Container>
         <Grid>
-          <GridColumn width={3} className="header__logo">
+          <GridColumn
+            textAlign="center"
+            computer={2}
+            tablet={2}
+            mobile={8}
+            className="header__logo"
+          >
             <Link to="/">
               <Image src={Logo} alt="Instotox" />
             </Link>
           </GridColumn>
-          <GridColumn width={10}>
+          <GridColumn computer={9} tablet={9} only="tablet computer">
             <Search />
           </GridColumn>
-          <GridColumn width={3}>
+          <GridColumn computer={5} tablet={5} mobile={8}>
             <RightHeader />
           </GridColumn>
         </Grid>

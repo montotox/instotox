@@ -13,9 +13,12 @@ const resolvers = {
       followController.isFollow(username, ctx),
     getFollowers: (_, { username }) => followController.getFollowers(username),
     getFollowing: (_, { username }) => followController.getFollowing(username),
+    getNotFolloweds: (_, {}, ctx) => followController.getNotFolloweds(ctx),
     //Publications
     getPublications: (_, { username }) =>
       publicationController.getPublications(username),
+    getPublicationsFolloweds: (_, {}, ctx) =>
+      publicationController.getPublicationsFolloweds(ctx),
     //Comments
     getComments: (_, { idPublication }) =>
       commentController.getComments(idPublication),
