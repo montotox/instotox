@@ -6,7 +6,8 @@
   "author": "montotox",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon ./index.js"
+    "dev": "nodemon ./index.js",
+    "start": "node ./index.js"
   },
   "dependencies": {
     "apollo-server": "^2.21.0",

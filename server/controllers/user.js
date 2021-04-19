@@ -50,7 +50,7 @@ async function login(input) {
   const passwordSuccess = await bcryptjs.compare(password, userFound.password);
   if (!passwordSuccess) throw new Error("Invalid mail or password");
   return {
-    token: createToken(userFound, process.env.SECRET_KEY, "10h"),
+    token: createToken(userFound, process.env.SECRET_KEY, "10d"),
   };
 }
 async function getUser(id, username) {

@@ -45,7 +45,7 @@ function server() {
       }
     },
   });
-  serverApollo.listen().then(({ url }) => {
+  serverApollo.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
     console.log("######################################################");
     console.log(`Playground server run in: ${url}`);
     console.log("######################################################");
