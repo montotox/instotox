@@ -26,6 +26,7 @@ export default function Comments(props) {
   const { getComments } = data;
   return (
     <div className="comments">
+      <h5>Comments:</h5>
       {map(getComments, (comment, index) => (
         <Link
           key={index}

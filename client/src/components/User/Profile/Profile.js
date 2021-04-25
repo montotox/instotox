@@ -55,14 +55,24 @@ export default function Profile(props) {
   return (
     <>
       <Grid className="profile">
-        <GridColumn width={5} className="profile__left">
+        <GridColumn
+          computer={5}
+          tablet={5}
+          mobile={6}
+          className="profile__left"
+        >
           <Image
             src={getUser.avatar ? getUser.avatar : imageNotFound}
             avatar
             onClick={() => username === auth.username && handlerModal("avatar")}
           />
         </GridColumn>
-        <GridColumn width={11} className="profile__right">
+        <GridColumn
+          computer={11}
+          tablet={11}
+          mobile={10}
+          className="profile__right"
+        >
           <HeaderProfile
             getUser={getUser}
             auth={auth}

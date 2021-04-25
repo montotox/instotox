@@ -4,7 +4,7 @@ import { setContext } from "apollo-link-context";
 import { getToken } from "../utils/token";
 
 const httpLink = createUploadLink({
-  uri: "https://instotox-server.herokuapp.com",
+  uri: "http://localhost:4000",
 });
 
 const authLink = setContext((_, { headers }) => {

@@ -14,4 +14,11 @@
     font-weight: bold;
     color: #000;
   }
+  @media screen and (max-width: $breakpoint-tablet) {
+    p {
+      margin-right: 20px;
+      margin-bottom: 0px;
+      text-align: center;
+    }
+  }
 }

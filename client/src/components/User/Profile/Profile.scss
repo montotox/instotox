@@ -28,4 +28,33 @@
       }
     }
   }
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin-top: 0px !important;
+    &__left {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+      padding-right: 5px !important;
+      .ui.image.avatar {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    &__right {
+      padding-top: 5px !important;
+      padding-bottom: 5px !important;
+      padding-left: 5px !important;
+      .other {
+        .name {
+          margin-bottom: 0px;
+          font-weight: bold;
+        }
+        .description {
+          margin-top: 0px;
+        }
+      }
+      h2 {
+        font-size: 16px;
+      }
+    }
+  }
 }

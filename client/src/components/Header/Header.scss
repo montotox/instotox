@@ -13,4 +13,16 @@
       height: 25px;
     }
   }
+  @media screen and (max-width: $breakpoint-tablet) {
+    &__logo-mobile {
+      padding-bottom: 0px !important;
+      justify-content: center !important;
+      img {
+        height: 25px;
+      }
+    }
+  }
+  .ui.grid.row {
+    justify-content: center !important;
+  }
 }

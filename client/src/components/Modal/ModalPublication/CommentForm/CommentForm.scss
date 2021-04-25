@@ -30,4 +30,7 @@
       background-color: transparent;
     }
   }
+  @media screen and (max-width: $breakpoint-tablet) {
+    position: relative !important;
+  }
 }
