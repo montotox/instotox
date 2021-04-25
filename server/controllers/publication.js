@@ -1,7 +1,7 @@
 const Publication = require("../models/publication");
 const User = require("../models/user");
 const Follow = require("../models/follow");
-const awsUploadImagen = require("../../server/utils/aws-upload-image");
+const awsUploadImagen = require("../utils/aws-upload-image");
 const { v4: uuidv4 } = require("uuid");
 
 async function publish(file, ctx) {

@@ -21,6 +21,7 @@ async function deleteLike(idPublication, ctx) {
     });
     return true;
   } catch (error) {
+    console.log("Manso Error:");
     console.log(error);
     return false;
   }
