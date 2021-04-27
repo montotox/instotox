@@ -9,7 +9,7 @@ export default function PreviewPublication(props) {
   return (
     <>
       <div className="preview-publication" onClick={() => setShowModal(true)}>
-        <Image className="preview-publication__imgage" src={publication.file} />
+        <Image className="preview-publication__image" src={publication.file} />
       </div>
       <ModalPublication
         show={showModal}

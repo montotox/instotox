@@ -36,10 +36,6 @@
         cursor: pointer;
         opacity: 0.9;
       }
-
-      @media screen and (max-width: $breakpoint-tablet) {
-        height: calc(75vw - 10px);
-      }
     }
 
     &-action {
@@ -53,6 +49,18 @@
 
     &-form {
       position: relative !important;
+    }
+    @media screen and (max-width: $breakpoint-tablet) {
+      &-user {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      &-photo {
+        height: calc(75vw - 10px);
+      }
+      &-action {
+        height: 40px;
+      }
     }
   }
 }
