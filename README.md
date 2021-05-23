@@ -66,9 +66,9 @@ const httpLink = createUploadLink({
 
 - **Ricardo Coronel** - _Initial work / Documentation_ - [montotox](https://github.com/montotox)
 
-## Licencia 📄
+## Licence 📄
 
-Este proyecto está bajo la Licencia (GPL) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+This project is under licence (MIT) - see the file [LICENSE.md](LICENSE.md) for more details.
 
 ## Expressions of gratitude 🎁
 
