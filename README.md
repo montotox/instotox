@@ -1,7 +1,5 @@
 # Instotox
 
-Visit the [Demo](https://instotox.netlify.app).
-
 ## Starting 🚀
 
 _This is instructions permit you to obtain a copy for this project._
